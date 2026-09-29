@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ComicCraft - AI Comic Story Creator</title>
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body class="hero-body">
+
+  <div class="container" style="max-width: 580px; margin: 40px auto;">
+    <div class="comic-card">
+      <h1 class="card-title">✏️ Create Your Comic</h1>
+
+      <form id="comic-form" action="/generate" method="POST">
+        <div class="form-group">
+          <label for="prompt" class="form-label">Story Prompt:</label>
+          <textarea 
+            id="prompt" 
+            name="prompt" 
+            class="form-control" 
+            rows="3" 
+            placeholder="A brave fox explores an enchanted forest."
+            required>A brave fox explores an enchanted forest.</textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="character_name" class="form-label">Main Character Name:</label>
+          <input 
+            type="text" 
+            id="character_name" 
+            name="character_name" 
+            class="form-control" 
+            value="Free" 
+            placeholder="Free"
+            required>
+        </div>
+
+        <div class="form-group">
+          <label for="setting" class="form-label">Setting:</label>
+          <select id="setting" name="setting" class="form-select">
+            <option value="Forest" selected>Forest</option>
+            <option value="School">School</option>
+            <option value="Space">Space</option>
+            <option value="City">City</option>
+            <option value="Castle">Castle</option>
+            <option value="Cyberpunk City">Cyberpunk City</option>
+            <option value="Ancient Ruins">Ancient Ruins</option>
+            <option value="Desert">Desert</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="tone" class="form-label">Story Tone:</label>
+          <select id="tone" name="tone" class="form-select">
+            <option value="Dramatic" selected>Dramatic</option>
+            <option value="Light-hearted">Light-hearted</option>
+            <option value="Poetic">Poetic</option>
+            <option value="Funny">Funny</option>
+            <option value="Action-packed">Action-packed</option>
+            <option value="Mysterious">Mysterious</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="style" class="form-label">Art Style:</label>
+          <select id="style" name="style" class="form-select">
+            <option value="Realistic" selected>Realistic</option>
+            <option value="Comic Book">Comic Book</option>
+            <option value="Anime">Anime</option>
+            <option value="Pixel Art">Pixel Art</option>
+            <option value="Watercolor">Watercolor</option>
+            <option value="Cyberpunk">Cyberpunk</option>
+          </select>
+        </div>
+
+        <button type="submit" class="btn btn-primary" style="margin-top: 10px;">Generate Comic</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Interactive Loading Screen -->
+  <div id="loading-overlay" class="loading-overlay">
+    <div class="spinner"></div>
+    <div class="loading-text">Crafting Your AI Comic...</div>
+    <div id="loading-status" class="loading-subtext">Initializing Gemini Flash for panel planning...</div>
+  </div>
+
+  <script src="/static/js/script.js"></script>
+</body>
+</html>

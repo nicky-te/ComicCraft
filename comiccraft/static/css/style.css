@@ -1,0 +1,316 @@
+/* ComicCraft - Modern Comic Story Creator Styles */
+
+:root {
+  --primary-color: #0d6efd;
+  --primary-hover: #0b5ed7;
+  --success-color: #198754;
+  --bg-gradient: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  --card-bg: rgba(255, 255, 255, 0.96);
+  --text-main: #212529;
+  --text-muted: #555e69;
+  --border-color: #ced4da;
+  --card-radius: 14px;
+  --box-shadow: 0 12px 36px rgba(0, 0, 0, 0.25);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  color: var(--text-main);
+  background-color: #2b3a4a;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Scenic Hero Background for Index */
+.hero-body {
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.35)),
+              url('https://images.unsplash.com/photo-1426604966848-d7adac402bff?auto=format&fit=crop&w=1920&q=80') center center / cover no-repeat fixed;
+  min-height: 100vh;
+}
+
+.preview-body {
+  background: #eaeff5;
+}
+
+.container {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+/* Card Container */
+.comic-card {
+  background: var(--card-bg);
+  border-radius: var(--card-radius);
+  box-shadow: var(--box-shadow);
+  padding: 36px 40px;
+  backdrop-filter: blur(8px);
+}
+
+.card-title {
+  text-align: center;
+  font-size: 1.85rem;
+  font-weight: 700;
+  color: #1a2b49;
+  margin-bottom: 24px;
+}
+
+/* Form Styles */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-label {
+  display: block;
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-bottom: 6px;
+  color: #1f2937;
+}
+
+.form-control, .form-select {
+  width: 100%;
+  padding: 10px 14px;
+  font-size: 0.95rem;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  background-color: #f8faff;
+  color: #1a202c;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  outline: none;
+}
+
+.form-control:focus, .form-select:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.2);
+  background-color: #ffffff;
+}
+
+textarea.form-control {
+  min-height: 100px;
+  resize: vertical;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  font-weight: 600;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  border: 1px solid transparent;
+  padding: 12px 24px;
+  font-size: 1.05rem;
+  border-radius: 8px;
+  transition: all 0.2s ease-in-out;
+  text-decoration: none;
+}
+
+.btn-primary {
+  color: #ffffff;
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  width: 100%;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-hover);
+  border-color: var(--primary-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(13, 110, 253, 0.35);
+}
+
+.btn-download {
+  background-color: var(--primary-color);
+  color: #ffffff;
+  padding: 14px 28px;
+  font-size: 1.15rem;
+  box-shadow: 0 4px 16px rgba(13, 110, 253, 0.3);
+}
+
+.btn-download:hover {
+  background-color: var(--primary-hover);
+}
+
+.btn-success-action {
+  background-color: var(--primary-color);
+  color: #ffffff;
+  padding: 12px 28px;
+}
+
+.btn-secondary-link {
+  color: var(--primary-color);
+  background: #f0f4f9;
+  border: 1px solid #d0d7de;
+}
+
+.btn-secondary-link:hover {
+  background: #e2e8f0;
+}
+
+/* Comic Preview Panels */
+.preview-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.preview-header h1 {
+  font-size: 2.1rem;
+  font-weight: 700;
+  color: #212529;
+}
+
+.panel-card {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  padding: 24px 28px;
+  margin-bottom: 28px;
+  border-left: 6px solid var(--primary-color);
+}
+
+.panel-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 16px;
+}
+
+.panel-image-container {
+  width: 100%;
+  max-width: 520px;
+  margin-bottom: 16px;
+}
+
+.panel-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: block;
+}
+
+.scene-desc {
+  font-style: italic;
+  color: #4b5563;
+  line-height: 1.5;
+  margin-bottom: 14px;
+  font-size: 0.98rem;
+}
+
+.story-text {
+  font-size: 1rem;
+  line-height: 1.65;
+  color: #1f2937;
+  white-space: pre-line;
+  background: #f9fafb;
+  padding: 14px 18px;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+}
+
+.story-text strong {
+  color: #111827;
+}
+
+/* Export Success Page */
+.success-card {
+  text-align: center;
+  padding: 60px 40px;
+  max-width: 650px;
+  margin: 80px auto;
+  background: #ffffff;
+  border-radius: var(--card-radius);
+  box-shadow: var(--box-shadow);
+}
+
+.success-badge {
+  display: inline-block;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #16a34a;
+  margin-bottom: 16px;
+}
+
+.success-desc {
+  font-size: 1.15rem;
+  color: #374151;
+  margin-bottom: 30px;
+  line-height: 1.5;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Loading Overlay */
+.loading-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(6px);
+  z-index: 9999;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  text-align: center;
+  padding: 20px;
+}
+
+.spinner {
+  width: 60px;
+  height: 60px;
+  border: 5px solid rgba(255, 255, 255, 0.2);
+  border-top-color: #38bdf8;
+  border-radius: 50%;
+  animation: spin 1s infinite linear;
+  margin-bottom: 24px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.loading-text {
+  font-size: 1.35rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.loading-subtext {
+  font-size: 0.95rem;
+  color: #94a3b8;
+  max-width: 450px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .comic-card {
+    padding: 24px 20px;
+  }
+  .card-title {
+    font-size: 1.5rem;
+  }
+  .panel-card {
+    padding: 18px;
+  }
+}
